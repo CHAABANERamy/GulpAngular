@@ -42,7 +42,7 @@ gulp.task('copyIndexHtml', function() {
 
 
 gulp.task('copyLib',['clean:public'], function(callback) {
-    runSequence('copyHtml', 'copy:libs','bundle:js', callback);
+    runSequence('copyHtml','copyIndexHtml', 'copy:libs','bundle:js', callback);
 });
 
 // Copy dependencies
